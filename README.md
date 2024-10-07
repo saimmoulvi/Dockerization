@@ -15,12 +15,12 @@ This repository contains a Dockerized Nginx web server that serves a simple HTML
 3. Access the web server by visiting `http://localhost:8080` in your web browser.
 
 ## Public Repository
-
-The Docker image is available on ECR at `<account_id>.dkr.ecr.<region>.amazonaws.com/my-nginx-image:latest`.   
-1. Create a public repository in AWS ECR.
+1. Create a public repository in AWS ECR.   
 2. Authenticate Docker to the AWS ECR:
-   `aws ecr get-login-password --region <region> | docker login --username AWS --password-stdin <account_id>.dkr.ecr.<region>.amazonaws.com`
-3. Tag the Docker Image:
-   `docker tag my-nginx-image:latest <account_id>.dkr.ecr.<region>.amazonaws.com/my-nginx-image:latest`
-4. Push the Image to ECR:
-   `docker push <account_id>.dkr.ecr.<region>.amazonaws.com/my-nginx-image:latest`   
+   ``` 
+   aws ecr get-login-password --region <region> | docker login --username AWS --password-stdin <account_id>.dkr.ecr.<region>.amazonaws.com
+   ``` 
+4. Tag the Docker Image:    
+   `docker tag my-nginx-image:latest <account_id>.dkr.ecr.<region>.amazonaws.com/my-nginx-image:latest`    
+5. Push the Image to ECR:    
+   `docker push <account_id>.dkr.ecr.<region>.amazonaws.com/my-nginx-image:latest`         
